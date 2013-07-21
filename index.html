@@ -19,15 +19,16 @@
                 padding-bottom: 40px;
             }
         </style>
+
         <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
         <link rel="stylesheet" href="css/main.css">
 		
 		<!-- Le fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="favicon.ico">
 		
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
@@ -36,8 +37,6 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-
-        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
         <div class="navbar navbar navbar-fixed-top">
             <div class="navbar-inner">
@@ -53,9 +52,9 @@
                             <li><a href="index.html">Home</a></li>
                             <li><a href="projects.html">Projects</a></li>
                             <li>
-                                <a href='#blog'>
+                                <a href="blog.html">
                                     Blog
-                                    <i class='icon-comments'></i>
+                                    <i class="icon-comments"></i>
                                 </a>
                             </li>
                         </ul>
@@ -63,52 +62,41 @@
                 </div>
             </div>
         </div>
-<!-- 		<header class="jumbotron masthead" id="overview"> -->
-        <header class='hero-unit' id='overview'>
-        <div class="container">
-              <h1 style='text-align:center'><highlight style='color:navy'>UPSHAM</highlight> DAWRA</h1>
-				<h2 style='text-align:center'>Think. <highlight style='color:orange'>Develop</highlight>. Engineer.</h2>
-		</div>
 
-  </header>
+        <header class="hero-unit" id="overview">
+            <div class="container">
+                <h1 style="text-align:center"><highlight style="color:navy">UPSHAM</highlight> DAWRA</h1>
+    			<h2 style="text-align:center">Think. <highlight style="color:orange">Develop</highlight>. Engineer.</h2>
+    		</div>
+        </header>
 		  
         <div class="container">
-            <!-- Main hero unit for a primary marketing message or call to action -->
-            <!-- 
-<div class="hero-unit">
-                <h1>Hello, world!</h1>
-                <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-            </div>
- -->
- 
-
  			<div class="row">
                 <div class="span9">
-                    <p class='lead' align="justify">Hi, I am Upsham Dawra and I'm a <span style='color:brown'>software developer</span> currently based in Pittsburgh, Pennsylvania. 
+                    <p class="lead" align="justify">
+                    Hi, I am Upsham Dawra and I'm a <span style="color:brown">software developer</span> currently based in Pittsburgh, Pennsylvania. 
                     I am pursuing a Master's degree in Software Engineering from Carnegie Mellon's School of Computer Science, and hope to graduate in August 2013. 
                     Before this, I completed my Bachelors in Electrical and Computer Engineering (minor in Mathematics) from Purdue University in May 2012.
                     My interests range from low-level hardware description languages and instructions to high-level software architecture constructs and machine learning algorithms. Some notable interests in between are operating systems, compilers, virtual machines and computer architecture.
-                    In general though, I'm more of a <span style='color:brown'>core systems guy</span> who thoroughly enjoys algorithms, mathematics and optimization.
+                    In general though, I'm more of a <span style="color:brown">core systems guy</span> who thoroughly enjoys algorithms, mathematics and optimization.
                     I love reasoning through problems, and have a passion for elegant solutions.</p>
-               </div>
-               <div class="span3">
+                </div>
+                <div class="span3">
                		<img src="./img/profpic.jpg">
                	</div>
             </div>
-			<div>
-			<p class='lead after-image' align="justify"> This webpage will act as a portfolio of the projects that I've done in the past. It will also double up
-			as a place for me to keep in touch with the latest and greatest web technologies, and try out things found on <a href="https://news.ycombinator.com/">Hacker News</a>.
-			Poke around, take a look at my projects, <a href="#">fork</a> the code for this website from Github, or hop on over to my swanky new <a href="#">blog</a> to catch my thoughts. Feel free to contact me at <span style="color:brown">upsham [at] cmu [dot] edu</span>.</p>
-			</div>
 
-			
+			<div>
+    			<p class="lead after-image" align="justify">This webpage will act as a portfolio of the projects that I've done in the past. It will also double up
+    			as a place for me to keep in touch with the latest and greatest web technologies, and try out things found on <a href="https://news.ycombinator.com/">Hacker News</a>.
+    			Poke around, take a look at my projects, <a href="#">fork</a> the code for this website from Github, or hop on over to my swanky new <a href="blog.html">blog</a> to catch my thoughts. Feel free to contact me at <span style="color:brown">upsham [at] cmu [dot] edu</span>.</p>
+			</div>
 
             <hr>
 
             <footer>
-                <p style='text-align:center'>&copy; Upsham Dawra 2013. All rights reserved.</p>
-                <p style='text-align:center'>This site proudly uses <a href='http://twitter.github.io/bootstrap/'>Bootstrap</a>, <a href='http://modernizr.com/'>Mordernizr</a> and <a href='http://fortawesome.github.io/Font-Awesome/'>Font Awesome</a> and is designed to render well on mobile.</p>
+                <p style="text-align:center">&copy; Upsham Dawra 2013. All rights reserved.</p>
+                <p style="text-align:center">This site proudly uses <a href="http://twitter.github.io/bootstrap/">Bootstrap</a>, <a href="http://modernizr.com/">Mordernizr</a> and <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> and is designed to render well on mobile.</p>
             </footer>
 
         </div> <!-- /container -->
