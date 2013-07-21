@@ -6,6 +6,10 @@ $('a[rel=tooltip]').tooltip({
 
 $('.navbar a, .subnav a').smoothScroll();
 
+$('[data-spy="scroll"]').each(function () {
+  $(this).scrollspy('refresh');
+});
+
 
 (function ($) {
 	$(function(){
@@ -20,6 +24,7 @@ $('.navbar a, .subnav a').smoothScroll();
 				subnavTop = $('.subnav').length && $('.subnav').offset().top - navHeight,
 				marginTop = parseInt($body.css('margin-top'), 10);
 				isFixed = 0;
+
 
 		processScroll();
 		
