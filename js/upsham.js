@@ -6,11 +6,24 @@ $('a[rel=tooltip]').tooltip({
 
 $('.navbar a, .subnav a').smoothScroll();
 
-$('[data-spy="scroll"]').each(function () {
-  $(this).scrollspy('refresh');
-});
+/*** Remove scrollspy if screen is small  or resized ***/
+if($(window).width() > 980){
+	$('body').attr('data-target', '.subnav');
 
+}else{
+	$('body').attr('data-target', 'nothing');
+}
 
+$(window).resize(function() { 
+	if($(window).width() > 980){
+		$('body').attr('data-target', '.subnav');
+
+	}else{
+		$('body').attr('data-target', 'nothing');
+	}
+ });
+
+/*** Sticky subnav bar, responsive based on screen size ***/
 (function ($) {
 	$(function(){
 	
