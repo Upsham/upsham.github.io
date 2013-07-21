@@ -629,7 +629,7 @@ height: 100%;
   }
 }
 
-@media (min-width: 768px) and (max-width: 979px){
+@media (min-width: 768px) and (max-width: 979px) and (orientation: portrait){
   .lead{
     font-size: 20px;
   }
@@ -638,6 +638,18 @@ height: 100%;
   }
   h1 small{
     font-size: 22px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) and (orientation: landscape){
+  .lead{
+    font-size: 18px;
+  }
+  h1{
+    font-size: 30px;
+  }
+  h1 small{
+    font-size: 20px;
   }
 }
 
