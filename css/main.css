@@ -10,6 +10,10 @@
 /* Base class
 ------------------------- */
 
+.after-image{
+
+}
+
 .jumbotron {
   position: relative;
   padding: 40px 0;
@@ -532,6 +536,7 @@ body .one .bsa_it_p {
   }
 }
  
+
 @media (min-width: 980px) {
   
   .subnav-fixed {
@@ -597,8 +602,44 @@ height: 100%;
 .flex-video { padding-top: 0; }
 }
 
+/********** Font Custom Resizing based on tests **************/
 
+@media(max-width: 767px) {
+  .lead {
+    font-size:18px;
+  }
+  .hero-unit h1{
+    font-size: 34px;
+  }
+  .hero-unit h2{
+    font-size: 20px;
+  }
 
+  .hero-unit {
+    font-size: 16px;
+  }
+  .after-image {
+    padding-top: 20px;
+  }
+  h1{
+    font-size: 30px;
+  }
+  h1 small{
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px){
+  .lead{
+    font-size: 20px;
+  }
+  h1{
+    font-size: 36px;
+  }
+  h1 small{
+    font-size: 22px;
+  }
+}
 
 
 
