@@ -7,21 +7,27 @@ $('a[rel=tooltip]').tooltip({
 $('.navbar a, .subnav a').smoothScroll();
 
 /*** Remove scrollspy if screen is small  or resized ***/
-if($(window).width() > 980){
+if($(window).width() > 1200){
 	$('body').attr('data-target', '.subnav');
 
 }else{
 	$('body').attr('data-target', 'nothing');
 }
 
-$(window).resize(function() { 
-	if($(window).width() > 980){
-		$('body').attr('data-target', '.subnav');
+$(document).ready(function () {
+    handleScrollSpy();
+    $(window).resize(function() {
+        handleScrollSpy();
+    });
+});
 
+function handleScrollSpy() {
+	if($(window).width() > 1200){
+		$('body').attr('data-target', '.subnav');
 	}else{
 		$('body').attr('data-target', 'nothing');
 	}
- });
+}
 
 /*** Sticky subnav bar, responsive based on screen size ***/
 (function ($) {
@@ -46,7 +52,7 @@ $(window).resize(function() {
 		function processScroll() {
 			var i, scrollTop = $win.scrollTop();
 			//If on small screen sizes, don't try as it will cause jitter
-			if ( $(window).width() > 980){
+			if ( $(window).width() > 1200){
 				if (scrollTop >= subnavTop && !isFixed) {
 					isFixed = 1;
 					$nav.addClass('subnav-fixed');
