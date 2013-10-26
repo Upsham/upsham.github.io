@@ -204,6 +204,61 @@
                 </div>
             </section>
 
+            <section id="third">
+            <div class="page-header">
+                <h1>GizmoE<small> Carnegie Mellon University</small></h1>
+            </div>
+            <div class="row">
+                    <div class="span9">
+                        <p class="lead" align="justify">
+                            This project was a team project (4 person team) completed in approximately 16 weeks during Spring 2012 as a Senior Design Project. Our team consisted of 3 electrical engineers and one computer engineer (ie me), so we chose to do a project that involved both hardware and software. Tradionally, ECE senior design projects that attempted aerial vehicles had not been succesful and we when we heard about this 'copter-jinx', we decided to tackle it. We built an unmanned aerial drone by taking the shell of a RC plane, fitting it with our own custom PCB (sponsered by Purdue ECE) powered by an Atmel AT32UC3A3256 microcontroller and writing base station code to control the UAV via an Xbox 360 controller. We also handled the communication between the base station and UAV (Xbee/Serial based). The microcontroller programming was done in embedded C using AVRStudio, while base station programming was done in C#.net to facilitate GUI programming. The UAV also had a live camera feed, and was equipped to take hi-res photos of the ground when required.
+                        </p>
+                   </div>
+                   <div class="span3">
+                        <img src="./img/csharp.png">
+                        <img src="./uav/c.jpg">
+                    </div>
+                </div>
+                <div>
+                    <p class="lead after-image" align="justify">
+                        In this project, I was solely responsible for the base station programming, and was handling the programmatic aspects and logic design for the microcontroller as well (sensors and communications were not handled by me). As an example, while I was not responsible for hooking up the Xbee communications (baud rate etc), I did have to make sure that the communication was 'reliable', i.e. data packets were not lost. However, in the end, I did help with PCB routing and other aspects and it turned to be a real learning experience for me. From the base station end, I used C#.net in conjunction with socket libraries and the XNA game library to communicate with the UAV, send and recieve data (and make it human-readable) and tweaking sensitivity on the Xbox 360 controller to make the UAV actually fly-able. Additionally, to reduce microprocessor load and to increase responsiveness, my base station code would pre-calculate the flight data, and directly send the requisite hex values to the microcontroller to put into the registers. Below, you will find screenshots of the GUI showing general flight data (Figure 4), and a screenshot of the main PCB design (Figure 5), omitting the powerboard which was a separate design. 
+                    </p>
+                </div>
+
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class="span6">
+                        <img src="./uav/ui.jpg">
+                        <br><br>
+                        <p align="center">Figure 4: Main User Interface on base station</p>
+                   </div>
+                   <div class="span6 pull-right">
+                        <img src="./uav/PCB.png">
+                        <br><br>
+                        <p align="center" style="padding-top:10px">Figure 5: Main PCB design</p>
+                    </div>
+                </div>
+
+                <br>
+
+                <div>
+                    <p class="lead" align="justify">
+                        Since this was a relatively large project, listing everything done here is impossible. We had to do everything from safety and environment analysis to technical analysis and present/defend our work each week. Fortunately, we had a create a website to chronicle everything hosted on Purdue's servers, and our website can now be found at the <a href="https://engineering.purdue.edu/ece477/Webs/S12-Grp03/">Purdue archives</a> . It includes things like our presentations, and even our <a href="https://engineering.purdue.edu/ece477/Webs/S12-Grp03/nb/udawra.html">notebooks</a>, which list the work done per week. Note that that website is not optimized for mobile viewing, and that the notebooks have lost the ECE styling after being archived, but all the content is still there. Additionally, we created a <a href="uav/report.pdf">final report</a>, <a href="uav/usermanual.pdf">user's manual</a> and a <a href="uav/poster.ppt">poster</a> at the end. The code for project (both embedded and base station) can be found on <a href="https://github.com/Upsham/Eye-in-the-Sky">Github</a>. We also created a video for the final demonstration, I have embedded it below for your viewing pleasure!
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="span6 offset3">
+                        <div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
+                            <iframe src="http://www.youtube.com/embed/sdCj-7Ce3ME?rel=0" frameborder="0" allowfullscreen></iframe><br>
+                        </div>
+                        <br>
+                        <p align="center">Project Specific Success Criteria demo video</p>
+                    </div>
+                </div>
+            </section>
+
             <hr>
 
             <footer>
@@ -225,7 +280,7 @@
         <script>
             var _gaq=[['_setAccount','UA-44530123-1'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
+            g.src=('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
     </body>
