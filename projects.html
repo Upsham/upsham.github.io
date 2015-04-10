@@ -3,13 +3,20 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+    <!-- Don't let textsize get bigger in landscape mode -->
+    <style> 
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+    </style>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Upsham Dawra | Software Developer</title>
         <meta name="description" content="Software Development Portfolio">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-
+        <meta name="apple-mobile-web-app-title" content="Upsham">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
         
@@ -23,10 +30,20 @@
         <link rel="stylesheet" href="css/main.css">
 		
     	<!-- Le fav and touch icons -->
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57-precomposed.png">
+        <!-- iPad retina icon -->
+        <link href="apple-touch-icon-precomposed-152.png" sizes="152x152" rel="apple-touch-icon-precomposed">
+        <!-- iPad retina icon (iOS < 7) -->
+        <link href="apple-touch-icon-precomposed-144.png" sizes="144x144" rel="apple-touch-icon-precomposed">
+        <!-- iPad non-retina icon -->
+        <link href="apple-touch-icon-precomposed-76.png" sizes="76x76" rel="apple-touch-icon-precomposed">
+        <!-- iPad non-retina icon (iOS < 7) -->
+        <link href="apple-touch-icon-precomposed-72.png" sizes="72x72" rel="apple-touch-icon-precomposed">
+        <!-- iPhone 6 Plus icon -->
+        <link href="apple-touch-icon-precomposed-180.png" sizes="120x120" rel="apple-touch-icon-precomposed">
+        <!-- iPhone retina icon (iOS < 7) -->
+        <link href="apple-touch-icon-precomposed-114.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+        <!-- iPhone non-retina icon (iOS < 7) -->
+        <link href="apple-touch-icon-precomposed-57.png" sizes="57x57" rel="apple-touch-icon-precomposed">
         <link rel="shortcut icon" href="favicon.ico">
     		
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -47,12 +64,14 @@
                     <a class="brand" href="index.html">+Upsham</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="projects.html">Projects</a></li>
                             <li>
-                                <a href="blog.html">
-                                    Blog
-                                    <i class="icon-comments"></i>
+                                <a href="index.html">Home
+                                    <i class="icon-home"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="projects.html">Projects
+                                    <i class="icon-code"></i>
                                 </a>
                             </li>
                         </ul>
@@ -77,8 +96,7 @@
                             <li><a href="#first">3D GPU</a></li>
                             <li><a href="#second">UAV</a></li>
                             <li><a href="#third">GizmoE</a></li>
-                            <li><a href="#fourth">Processor</a></li>
-                            <li><a href="#miscellaneous">Miscellaneous</a></li>
+                            <li><a href="#miscellaneous">More</a></li>
                         </ul>
                     </div>
                 </div>            
@@ -156,7 +174,7 @@
             <div class="row">
                     <div class="span9">
                         <p class="lead" align="justify">
-                            This project was a team project (4 person team) completed in approximately 16 weeks during Spring 2012 as a Senior Design Project. Our team consisted of 3 electrical engineers and one computer engineer (ie me), so we chose to do a project that involved both hardware and software. Tradionally, ECE senior design projects that attempted aerial vehicles had not been succesful and we when we heard about this 'copter-jinx', we decided to tackle it. We built an unmanned aerial drone by taking the shell of a RC plane, fitting it with our own custom PCB (sponsered by Purdue ECE) powered by an Atmel AT32UC3A3256 microcontroller and writing base station code to control the UAV via an Xbox 360 controller. We also handled the communication between the base station and UAV (Xbee/Serial based). The microcontroller programming was done in embedded C using AVRStudio, while base station programming was done in C#.net to facilitate GUI programming. The UAV also had a live camera feed, and was equipped to take hi-res photos of the ground when required.
+                            This project was a team project (4 person team) completed in approximately 16 weeks during Spring 2012 as a Senior Design Project. Our team consisted of 3 electrical engineers and one computer engineer (ie me), so we chose to do a project that involved both hardware and software. Tradionally, ECE senior design projects that attempted aerial vehicles had not been succesful, so naturally when we heard about this 'copter-jinx', we decided to tackle it. We built an unmanned aerial drone by taking the shell of a RC plane, fitting it with our own custom PCB (sponsered by Purdue ECE) powered by an Atmel AT32UC3A3256 microcontroller and writing base station code to control the UAV via an Xbox 360 controller. We also handled the communication between the base station and UAV (Xbee/Serial based). The microcontroller programming was done in embedded C using AVRStudio, while base station programming was done in C#.net to facilitate GUI programming. The UAV also had a live camera feed, and was equipped to take hi-res photos of the ground when required.
                         </p>
                    </div>
                    <div class="span3">
@@ -211,17 +229,16 @@
             <div class="row">
                     <div class="span9">
                         <p class="lead" align="justify">
-                            This project was a team project (4 person team) completed in approximately 16 weeks during Spring 2012 as a Senior Design Project. Our team consisted of 3 electrical engineers and one computer engineer (ie me), so we chose to do a project that involved both hardware and software. Tradionally, ECE senior design projects that attempted aerial vehicles had not been succesful and we when we heard about this 'copter-jinx', we decided to tackle it. We built an unmanned aerial drone by taking the shell of a RC plane, fitting it with our own custom PCB (sponsered by Purdue ECE) powered by an Atmel AT32UC3A3256 microcontroller and writing base station code to control the UAV via an Xbox 360 controller. We also handled the communication between the base station and UAV (Xbee/Serial based). The microcontroller programming was done in embedded C using AVRStudio, while base station programming was done in C#.net to facilitate GUI programming. The UAV also had a live camera feed, and was equipped to take hi-res photos of the ground when required.
+                            This project was a team project (2 man team) completed in approximately 8 months over Spring and Summer 2013 as a Practicum project. The team consisted of 2 software engineers, and involved Carnegie Mellon's Robotics department as customers (fairly unusual). The background for this project was that the CMU Robotics department had created a robot called CoBot (Collaborative Bot). They were looking for ways to apply this technology to other areas. In this project, we had to follow any chosen software development lifecycle, and go all the way from requirements gathering to coding, testing and delivering the product. The software product we ended up delivering was an extendable, educational Telepresence Robotics platform. We built a task-based robotics platform that can be easily extended by adding new tasks and capabilities, so that educators with no special training can adapt telepresence robots to a wide range of teaching contexts and student characteristics. The system had a Web-based component, an XML-based tasking language and a on-robot component.
                         </p>
                    </div>
                    <div class="span3">
-                        <img src="./img/csharp.png">
-                        <img src="./uav/c.jpg">
+                        <img src="./img/cobot.png">
                     </div>
                 </div>
                 <div>
                     <p class="lead after-image" align="justify">
-                        In this project, I was solely responsible for the base station programming, and was handling the programmatic aspects and logic design for the microcontroller as well (sensors and communications were not handled by me). As an example, while I was not responsible for hooking up the Xbee communications (baud rate etc), I did have to make sure that the communication was 'reliable', i.e. data packets were not lost. However, in the end, I did help with PCB routing and other aspects and it turned to be a real learning experience for me. From the base station end, I used C#.net in conjunction with socket libraries and the XNA game library to communicate with the UAV, send and recieve data (and make it human-readable) and tweaking sensitivity on the Xbox 360 controller to make the UAV actually fly-able. Additionally, to reduce microprocessor load and to increase responsiveness, my base station code would pre-calculate the flight data, and directly send the requisite hex values to the microcontroller to put into the registers. Below, you will find screenshots of the GUI showing general flight data (Figure 4), and a screenshot of the main PCB design (Figure 5), omitting the powerboard which was a separate design. 
+                        Being the more technically-inclined of the two, I was generally responsible for all architectural and development work while my partner opted to work on the Project Management part of things (we followed Agile Scrum + ACDM). The robot, when we got it, had ROS on it along with some python based 'capabilities' that had been programmed in by the robotics department. We had our own python module which would listen for commands on a certain port, parse those commands and convert it into lower level capabilities like "Rotate wheels for x seconds". On the other end, we had a webapp on a basic Apache tomcat server, Apache ActiveMQ for messaging, a javascript based UI and java controllers using the Struts MVC framework. The controllers would hook into the tasking system itself, allowing the user to create and execute 'tasks' remotely. These 'tasks' were larger units of works that could be placed in various combinations with one other, and internally involved capabilities strung together. One example of a task would be 'Go to room x in building y', where the tasking system had access to the map of building 'y'. Another example would be 'Go talk to advisor', which internally could include 'Go to room x in building y' along with 'Start video conference'. So, once a user had created a 'task', it could be re-used in combinations with other tasks. The overall architecture of the system is way beyond the scope of this portfolio site, but I have included the dynamic architecture in Figure 6 and static view of it in Figure 7 (click them for larger images). Additionally, an architectural document can be found <a href="./docs/ArchDocument.docx">here.
                     </p>
                 </div>
 
@@ -230,14 +247,14 @@
 
                 <div class="row">
                     <div class="span6">
-                        <img src="./uav/ui.jpg">
-                        <br><br>
-                        <p align="center">Figure 4: Main User Interface on base station</p>
+                        <a href="./img/ArchDynamic.png"><img src="./img/ArchDynamic.png"></a>
+                        <br><br><br><br>
+                        <p align="center">Figure 6: Dynamic View of the System</p>
                    </div>
                    <div class="span6 pull-right">
-                        <img src="./uav/PCB.png">
+                        <a href="./img/ArchStatic.png"><img src="./img/ArchStatic.png"></a>
                         <br><br>
-                        <p align="center" style="padding-top:10px">Figure 5: Main PCB design</p>
+                        <p align="center" style="padding-top:10px">Figure 7: Static View of the System</p>
                     </div>
                 </div>
 
@@ -245,25 +262,54 @@
 
                 <div>
                     <p class="lead" align="justify">
-                        Since this was a relatively large project, listing everything done here is impossible. We had to do everything from safety and environment analysis to technical analysis and present/defend our work each week. Fortunately, we had a create a website to chronicle everything hosted on Purdue's servers, and our website can now be found at the <a href="https://engineering.purdue.edu/ece477/Webs/S12-Grp03/">Purdue archives</a> . It includes things like our presentations, and even our <a href="https://engineering.purdue.edu/ece477/Webs/S12-Grp03/nb/udawra.html">notebooks</a>, which list the work done per week. Note that that website is not optimized for mobile viewing, and that the notebooks have lost the ECE styling after being archived, but all the content is still there. Additionally, we created a <a href="uav/report.pdf">final report</a>, <a href="uav/usermanual.pdf">user's manual</a> and a <a href="uav/poster.ppt">poster</a> at the end. The code for project (both embedded and base station) can be found on <a href="https://github.com/Upsham/Eye-in-the-Sky">Github</a>. We also created a video for the final demonstration, I have embedded it below for your viewing pleasure!
+                        Since this was a multi-month project, listing everything done here is impossible. The overview above only goes over some of the technical aspect, while the technical aspect itself is only a small percentage of the project. We had to do everything including initial requirements gathering including customer sign-off and a formal SOW, architecture design including architectural experimenation, development, testing and project delivery and hand-off. Not all of the documents can be shared here, but we did have a presentation at the midpoint and the end to showcase our work to other Master's students and professors. These presentations were recorded, unfortunately those recording are only available to CMU Tartans. I was able to find my slides for these though, and the presentation for spring can be found <a href="./docs/GizmoE_EOSP_Spring.pptx">here</a>, while the one from summer is <a href="./docs/GizmoE_EOSP_Summer.pptx">here</a>. Fair warning, these aren't optimized for mobile, and are ~15MB each. The code for project (only task system, not the on-robot part) can be found on <a href="https://github.com/Upsham/GizmoE">Github</a>. We also created a video as a demo for the final presentation, along with a sample UI considering that we couldn't have the presentees follow the CoBot around the building. The code for that can be found in a separate <a href="https://github.com/Upsham/GizmoE_GUI_Demo">Github repo</a>, and I've included the video itself below (there's no sound unfortunately, as I talked over this in the presentation). Please do contact me directly if you want to know more about this project!
                     </p>
                 </div>
                 <div class="row">
                     <div class="span6 offset3">
                         <div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
-                            <iframe src="http://www.youtube.com/embed/sdCj-7Ce3ME?rel=0" frameborder="0" allowfullscreen></iframe><br>
+                            <iframe src="https://www.youtube.com/embed/OjU7qr6DCuI" frameborder="0" allowfullscreen></iframe><br>
                         </div>
                         <br>
-                        <p align="center">Project Specific Success Criteria demo video</p>
+                        <p align="center">GizmoE demo video</p>
                     </div>
                 </div>
             </section>
-
+            <section id="miscellaneous">
+                <div class="page-header">
+                    <h1>More</h1>
+                </div>
+                <div class="row">
+                    <div class="span8">
+                        <p class="lead" align="justify">I really like getting my hands dirty and learning things by trying out new stuff on my own. So, it's rare that I don't have one (or several) pet projects that I am working on at any given time. The problem is, I don't get the urge to write much, I start feeling the itch to develop something else in that time instead. As you can guess, this leaves a fair number of significant projects that I haven't gotten the time to write up a post-mortem summary for yet. Here's a list of other personal projects that I worked on or am working on currently, I hope to dequeue the items from the list one-at-a-time and write a more detailed section above soon:
+                        </p>
+                    </div>
+                    <div class="span2">
+                        <a href="http://www.irobot.com/"><img src="./img/irobot.jpg"></a>
+                    </div>
+                    <div class="span2">
+                        <a href="https://nodejs.org/"><img src="./img/nodejs.jpg"></a>
+                        <a href="https://www.mongodb.org/"><img src="./img/mongo.jpeg"></a>
+                        <a href="http://yeoman.io/"><img src="./img/yo.png"></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span12"><ul>
+                        <li class="lead" align="justify">Multicore Processor in MIPS architecture (2012) - A muti-stage pipelined multi-core processor coded from scratch to run MIPS, and tested on a FPGA.</li>
+                        <li class="lead" align="justify">Machine Learning Projects (2013) - A decision tree implementation, a Naive Bayes classifier to classify Republicans and Democrats based on text (trained on a large data corpus), etc.</li>
+                        <li class="lead" align="justify">iRobot Controllable "Dog" (2014) - A roomba, an Arduino Mega, an Xbox controller, extra sensors and some embedded and C# code. Motivation: was missing my dog.</li>
+                        <li class="lead" align="justify">Home automation using WeMo (2014) - Some neat tricks to make my current home more convenient using WeMo hardware, python and bash scripting.</li>
+                        <li class="lead" align="justify">Platform on Heroku (2015) - Webapp being developed with MongoDB, ExpressJS, AngularJS and NodeJS, using Yeoman, Grunt, Bootstrap. Android app to connect via a NodeJS-based engine. Everything will be on Heroku, using this to keep up with latest web technologies.
+                        </li>
+                        </ul>                        
+                    </div>
+                </div>
+            </section>
             <hr>
 
             <footer>
-                <p style="text-align:center">&copy; Upsham Dawra 2013. All rights reserved.</p>
-                <p style="text-align:center">This site proudly uses <a href="http://twitter.github.io/bootstrap/">Bootstrap</a>, <a href="http://modernizr.com/">Mordernizr</a> and <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> and is designed to render well on mobile.</p>
+                <p style="text-align:center">&copy; Upsham Dawra 2015. All rights reserved.</p>
+                <p style="text-align:center">This site proudly uses <a href="http://twitter.github.io/bootstrap/" target="_blank">Bootstrap</a>, <a href="http://modernizr.com/" target="_blank">Mordernizr</a> and <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a>. It is hosted directly on <a href="https://github.com/" target="_blank">Github</a> and is designed to render well on mobile.</p>
             </footer>
 
         </div> <!-- /container -->

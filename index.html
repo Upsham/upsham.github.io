@@ -3,13 +3,20 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+    <!-- Don't let textsize get bigger in landscape mode -->
+    <style> 
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+    </style>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Upsham Dawra | Software Developer</title>
         <meta name="description" content="Software Development Portfolio">
         <meta name="viewport" content="width=device-width,initial-scale=1" >
-
+        <meta name="apple-mobile-web-app-title" content="Upsham">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
         
@@ -24,10 +31,20 @@
         <link rel="stylesheet" href="css/main.css">
 		
 		<!-- Le fav and touch icons -->
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57-precomposed.png">
+        <!-- iPad retina icon -->
+        <link href="apple-touch-icon-precomposed-152.png" sizes="152x152" rel="apple-touch-icon-precomposed">
+        <!-- iPad retina icon (iOS < 7) -->
+        <link href="apple-touch-icon-precomposed-144.png" sizes="144x144" rel="apple-touch-icon-precomposed">
+        <!-- iPad non-retina icon -->
+        <link href="apple-touch-icon-precomposed-76.png" sizes="76x76" rel="apple-touch-icon-precomposed">
+        <!-- iPad non-retina icon (iOS < 7) -->
+        <link href="apple-touch-icon-precomposed-72.png" sizes="72x72" rel="apple-touch-icon-precomposed">
+        <!-- iPhone 6 Plus icon -->
+        <link href="apple-touch-icon-precomposed-180.png" sizes="120x120" rel="apple-touch-icon-precomposed">
+        <!-- iPhone retina icon (iOS < 7) -->
+        <link href="apple-touch-icon-precomposed-114.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+        <!-- iPhone non-retina icon (iOS < 7) -->
+        <link href="apple-touch-icon-precomposed-57.png" sizes="57x57" rel="apple-touch-icon-precomposed">
         <link rel="shortcut icon" href="favicon.ico">
 		
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -41,20 +58,22 @@
         <div class="navbar navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <!--<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                    </a>
+                    </a>-->
                     <a class="brand" href="index.html">+Upsham</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="projects.html">Projects</a></li>
                             <li>
-                                <a href="blog.html">
-                                    Blog
-                                    <i class="icon-comments"></i>
+                                <a href="index.html">Home
+                                    <i class="icon-home"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="projects.html">Projects
+                                    <i class="icon-code"></i>
                                 </a>
                             </li>
                         </ul>
@@ -72,11 +91,10 @@
  			<div class="row">
                 <div class="span9">
                     <p class="lead" align="justify">
-                    Hi, I am Upsham Dawra and I'm a <span style="color:brown">software developer</span> currently based at Pittsburgh, Pennsylvania. 
-                    I am pursuing a Master's degree in Software Engineering from Carnegie Mellon's School of Computer Science, and hope to graduate in August 2013. 
+                    Hi, I am Upsham Dawra and I'm a <span style="color:brown">software developer</span> based in San Diego, California. I am currently working in the Windows Phone team at Qualcomm. I hold a Master's degree in Software Engineering from Carnegie Mellon's School of Computer Science earned in August 2013. 
                     Before this, I completed my Bachelors in Electrical and Computer Engineering (minor in Mathematics) from Purdue University in May 2012.
-                    My interests range from low-level hardware description languages and instructions to high-level software architecture constructs and machine learning algorithms. Some notable interests in between are operating systems, compilers, virtual machines and computer architecture.
-                    In general though, I'm more of a <span style="color:brown">core systems guy</span> who thoroughly enjoys algorithms, mathematics and optimization.
+                    My interests range from low-level hardware description languages and instructions to high-level software architecture constructs, web design and machine learning algorithms. Some notable interests in between are operating systems, compilers, virtual machines and computer architecture.
+                    In general though, I'm more of a <span style="color:brown">technical</span> guy who thoroughly enjoys algorithms, mathematics and optimization.
                     I love reasoning through problems, and have a passion for elegant solutions.</p>
                 </div>
                 <div class="span3">
@@ -87,14 +105,14 @@
 			<div>
     			<p class="lead after-image" align="justify">This webpage will act as a portfolio of the projects that I've done in the past. It will also double up
     			as a place for me to keep in touch with the latest and greatest web technologies, and try out things found on <a href="https://news.ycombinator.com/" target="_blank">Hacker News</a>.
-    			Poke around, take a look at my projects, <a href="#">fork</a> the code for this website from Github, or hop on over to my swanky new <a href="blog.html">blog</a> to catch my thoughts. Feel free to contact me at <span style="color:brown">upsham [at] cmu [dot] edu</span>.</p>
+    			Poke around, take a look at my projects, <a href="#">fork</a> the code for this website from Github, view my professional Linkedin overview <a href="https://www.linkedin.com/in/upsham" target="_blank"><i class="icon-linkedin"></i></a>, or contact me directly at <span style="color:brown">upsham [at] gmail [dot] com</span></p>
 			</div>
 
             <hr>
 
             <footer>
-                <p style="text-align:center">&copy; Upsham Dawra 2013. All rights reserved.</p>
-                <p style="text-align:center">This site proudly uses <a href="http://twitter.github.io/bootstrap/" target="_blank">Bootstrap</a>, <a href="http://modernizr.com/" target="_blank">Mordernizr</a> and <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> and is designed to render well on mobile.</p>
+                <p style="text-align:center">&copy; Upsham Dawra 2015. All rights reserved.</p>
+                <p style="text-align:center">This site proudly uses <a href="http://twitter.github.io/bootstrap/" target="_blank">Bootstrap</a>, <a href="http://modernizr.com/" target="_blank">Mordernizr</a> and <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a>. It is hosted directly on <a href="https://github.com/">Github</a> and is designed to render well on mobile.</p>
             </footer>
 
         </div> <!-- /container -->
